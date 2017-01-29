@@ -2,7 +2,7 @@
 //  ViewController.h
 //  calculator
 //
-//  Created by Kelel on 2017-01-28.
+//  Created by Kelwin Joanes on 2017-01-28.
 //  Copyright © 2017 com.kelel. All rights reserved.
 //
 
