@@ -7,8 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "math.h"
 
 @interface ViewController ()
+
 @property (weak, nonatomic) IBOutlet UITextField *txtDisplay;
 @property (nonatomic, assign) BOOL decimalPoint;
 @property (nonatomic, assign) BOOL clearScreen;
@@ -16,9 +18,11 @@
 @property (nonatomic, assign) float firstOperand;
 @property (nonatomic, assign) float secondOperand;
 
-- (IBAction)operandBtn:(id)sender;
-- (IBAction)binaryOperator:(id)sender;
+- (IBAction)displayOperand:(id)sender;
+- (IBAction)selectBinaryOperator:(id)sender;
+- (IBAction)selectUnaryOperator:(id)sender;
 - (IBAction)evaluateExpression:(id)sender;
+- (IBAction)clearOrDeleteDisplayText:(id)sender;
 
 @end
 
@@ -27,9 +31,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view, typically from a nib.
     [self setDecimalPoint:NO];
     [self setOperator:@""];
+    [self setFirstOperand:0];
+    [self setSecondOperand:0];
+    [self setOperator:@"+"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,7 +46,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)operandBtn:(id)sender
+- (IBAction)displayOperand:(id)sender
 {
     // Grab current text from display
     NSString *currentText = _txtDisplay.text;
@@ -98,7 +106,7 @@
     }
 }
 
-- (IBAction)binaryOperator:(id)sender
+- (IBAction)selectBinaryOperator:(id)sender
 {
     // Set current text in display to be the first operand
     NSString *currentText = _txtDisplay.text;
@@ -141,19 +149,88 @@
         _txtDisplay.text = [NSString stringWithFormat:@"%.3f", quotient];
         [self setFirstOperand:quotient];
     }
-    else
+    else if ([[self operator] isEqualToString:@"✕"])
     {
         float product = [self firstOperand] * [self secondOperand];
         _txtDisplay.text = [NSString stringWithFormat:@"%.3f", product];
         [self setFirstOperand:product];
     }
+    else
+    {
+        float power = powf([self firstOperand], [self secondOperand]);
+        _txtDisplay.text = [NSString stringWithFormat:@"%.3f", power];
+        [self setFirstOperand:power];
+    }
     
     // Reset second operand to '0'
     [self setSecondOperand:0];
-    // Set flag
-    [self setDecimalPoint:YES];
     
+    // Set flags
+    [self setDecimalPoint:YES];
+    [self setClearScreen:YES];
 }
 
+- (IBAction)selectUnaryOperator:(id)sender
+{
+    // Get operand
+    NSString *currentText = _txtDisplay.text;
+    
+    // Get label text of button
+    NSString *btnText = [(UIButton *)sender currentTitle];
+    
+    // Evaluate expression based on operand and operator
+    if ([btnText isEqualToString:@"±"])
+    {
+        float result = [currentText floatValue] * (-1.0);
+        _txtDisplay.text = [NSString stringWithFormat:@"%.3f", result];
+    }
+    else if ([btnText isEqualToString:@"1/x"])
+    {
+        float inverse = 1.0 / [currentText floatValue];
+        _txtDisplay.text = [NSString stringWithFormat:@"%.3f", inverse];
+    }
+    else if ([btnText isEqualToString:@"√"])
+    {
+        float root = sqrtf([currentText floatValue]);
+        _txtDisplay.text = [NSString stringWithFormat:@"%.3f", root];
+    }
+    else if ([btnText isEqualToString:@"x^2"])
+    {
+        float square = powf([currentText floatValue], 2.0);
+        _txtDisplay.text = [NSString stringWithFormat:@"%.3f", square];
+    }
+    else
+    {
+        float cube = powf([currentText floatValue], 3.0);
+        _txtDisplay.text = [NSString stringWithFormat:@"%.3f", cube];
+    }
+    
+    // Set flags
+    [self setDecimalPoint:YES];
+    [self setClearScreen:YES];
+}
+
+- (IBAction)clearOrDeleteDisplayText:(id)sender
+{
+    // Get label text of button
+    NSString *command = [(UIButton *)sender currentTitle];
+    
+    if ([command isEqualToString:@"C"])
+    {
+        // Clear display and reset operands and operator
+        _txtDisplay.text = @"";
+        [self setFirstOperand:0];
+        [self setSecondOperand:0];
+        [self setOperator:@"+"];
+        [self setDecimalPoint:NO];
+    }
+    else
+    {
+        // Delete last digit of current operand
+        NSString *currentText = _txtDisplay.text;
+        if (![currentText isEqualToString:@""])
+            _txtDisplay.text = [currentText substringToIndex:([currentText length]-1)];
+    }
+}
 
 @end
