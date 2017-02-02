@@ -24,6 +24,7 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="2"/>
                                 <connections>
                                     <action selector="displayOperand:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s7g-Gx-k37"/>
@@ -34,6 +35,7 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="3"/>
                                 <connections>
                                     <action selector="displayOperand:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o7B-y7-mJR"/>
@@ -42,8 +44,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nlu-zD-aKp">
                                 <rect key="frame" x="261" y="78" width="43" height="30"/>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="0.61050255399999998" blue="0.070248526300000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="1/x"/>
                                 <connections>
                                     <action selector="selectUnaryOperator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q6q-i3-Xdf"/>
@@ -52,8 +55,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYz-4b-0zk">
                                 <rect key="frame" x="210" y="78" width="43" height="30"/>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="0.61050255399999998" blue="0.070248526300000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="+"/>
                                 <connections>
                                     <action selector="selectBinaryOperator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R4c-pB-8QM"/>
@@ -71,6 +75,7 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="5"/>
                                 <connections>
                                     <action selector="displayOperand:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qsg-r6-l7k"/>
@@ -81,6 +86,7 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="4"/>
                                 <connections>
                                     <action selector="displayOperand:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dz5-Eu-UAD"/>
@@ -91,6 +97,7 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="6"/>
                                 <connections>
                                     <action selector="displayOperand:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MfF-iG-6qJ"/>
@@ -101,6 +108,7 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="7"/>
                                 <connections>
                                     <action selector="displayOperand:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qbR-Pt-hUU"/>
@@ -111,6 +119,7 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="8"/>
                                 <connections>
                                     <action selector="displayOperand:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4C6-ei-ha7"/>
@@ -119,8 +128,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZOA-Nb-QGa">
                                 <rect key="frame" x="261" y="116" width="43" height="30"/>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="0.61050255399999998" blue="0.070248526300000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="√"/>
                                 <connections>
                                     <action selector="selectUnaryOperator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bKM-zL-6mg"/>
@@ -129,8 +139,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6p6-cI-Gko">
                                 <rect key="frame" x="210" y="116" width="43" height="30"/>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="0.61050255399999998" blue="0.070248526300000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="-"/>
                                 <connections>
                                     <action selector="selectBinaryOperator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uha-CP-jLc"/>
@@ -139,8 +150,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4YQ-d9-gWF">
                                 <rect key="frame" x="261" y="154" width="43" height="30"/>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="0.61050255399999998" blue="0.070248526300000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="x^2"/>
                                 <connections>
                                     <action selector="selectUnaryOperator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a2C-s2-7am"/>
@@ -149,8 +161,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4B-Vx-3SM">
                                 <rect key="frame" x="210" y="154" width="43" height="30"/>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="0.61050255399999998" blue="0.070248526300000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="✕"/>
                                 <connections>
                                     <action selector="selectBinaryOperator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8hb-lk-sfi"/>
@@ -159,8 +172,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGL-60-Mfj">
                                 <rect key="frame" x="261" y="192" width="43" height="30"/>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="0.61050255399999998" blue="0.070248526300000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="x^3"/>
                                 <connections>
                                     <action selector="selectUnaryOperator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="okk-Rd-juG"/>
@@ -171,6 +185,7 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="0"/>
                                 <connections>
                                     <action selector="displayOperand:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JgP-KQ-Xgx"/>
@@ -181,6 +196,7 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="."/>
                                 <connections>
                                     <action selector="displayOperand:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gJm-Pp-OM6"/>
@@ -189,8 +205,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8VZ-cI-ieE">
                                 <rect key="frame" x="261" y="230" width="43" height="30"/>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="0.61050255399999998" blue="0.070248526300000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="x^y"/>
                                 <connections>
                                     <action selector="selectBinaryOperator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7fL-35-rXH"/>
@@ -199,8 +216,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEr-YX-ICw">
                                 <rect key="frame" x="210" y="230" width="43" height="30"/>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="0.61050255399999998" blue="0.070248526300000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="±"/>
                                 <connections>
                                     <action selector="selectUnaryOperator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wRX-qL-vTg"/>
@@ -209,8 +227,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ggd-R8-HRe">
                                 <rect key="frame" x="93" y="430" width="68" height="30"/>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="0.3927565978" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Del"/>
                                 <connections>
                                     <action selector="clearOrDeleteDisplayText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cha-YN-REf"/>
@@ -219,8 +238,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcn-Gj-wXZ">
                                 <rect key="frame" x="210" y="430" width="94" height="30"/>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.43449821970000002" green="0.78776041669999997" blue="0.24631944980000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="="/>
                                 <connections>
                                     <action selector="evaluateExpression:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YYj-fS-bus"/>
@@ -229,8 +249,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOQ-Qx-u0b">
                                 <rect key="frame" x="16" y="430" width="69" height="30"/>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="0.3927565978" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="C"/>
                                 <connections>
                                     <action selector="clearOrDeleteDisplayText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ETk-af-fkJ"/>
@@ -239,8 +260,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OTh-w6-gvW">
                                 <rect key="frame" x="210" y="192" width="43" height="30"/>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="0.61050255399999998" blue="0.070248526300000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="÷"/>
                                 <connections>
                                     <action selector="selectBinaryOperator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8th-11-nVQ"/>
@@ -251,6 +273,7 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="1"/>
                                 <connections>
                                     <action selector="displayOperand:" destination="BYZ-38-t0r" eventType="touchUpInside" id="do7-9c-7xm"/>
@@ -261,6 +284,7 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="9"/>
                                 <connections>
                                     <action selector="displayOperand:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qa7-L4-Ze4"/>
@@ -268,7 +292,7 @@
                             </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.67044765062246559" green="0.76233976787825786" blue="0.83053828534031415" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="QbL-Bq-O38" firstAttribute="top" secondItem="Ggd-R8-HRe" secondAttribute="bottom" constant="20" id="1Kd-49-XVm"/>
                             <constraint firstItem="Wtq-rf-jav" firstAttribute="leading" secondItem="TaR-G4-6ng" secondAttribute="trailing" constant="8" id="1qa-FF-V8a"/>
