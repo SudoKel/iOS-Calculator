@@ -1,6 +1,6 @@
 //
 //  ViewController.m
-//  calculator
+//  A simple calculator.
 //
 //  Created by Kelwin Joanes on 2017-01-28.
 //  Copyright © 2017 com.kelel. All rights reserved.
@@ -11,6 +11,7 @@
 
 @interface ViewController ()
 
+// Properties
 @property (weak, nonatomic) IBOutlet UITextField *txtDisplay;
 @property (nonatomic, assign) BOOL decimalPoint;
 @property (nonatomic, assign) BOOL clearScreen;
@@ -18,6 +19,7 @@
 @property (nonatomic, assign) float firstOperand;
 @property (nonatomic, assign) float secondOperand;
 
+// Methods
 - (IBAction)displayOperand:(id)sender;
 - (IBAction)selectBinaryOperator:(id)sender;
 - (IBAction)selectUnaryOperator:(id)sender;
@@ -33,10 +35,16 @@
     [super viewDidLoad];
     
     // Do any additional setup after loading the view, typically from a nib.
+    // Set flag to limit decimal points to 1
     [self setDecimalPoint:NO];
-    [self setOperator:@""];
+    
+    // Initialize first operand to be 0
     [self setFirstOperand:0];
+    
+    // Initialize second operand to be 0
     [self setSecondOperand:0];
+    
+    // Initialize default operator to be addition
     [self setOperator:@"+"];
 }
 
@@ -46,66 +54,81 @@
     // Dispose of any resources that can be recreated.
 }
 
+/**
+ This method is used to display the text of the numeric
+ buttons (0-9) and '.', which basically form the operands 
+ of the expression
+ */
 - (IBAction)displayOperand:(id)sender
 {
-    // Grab current text from display
+    // Grab current text from display or textfield
     NSString *currentText = _txtDisplay.text;
     
     // Get label text of button
     NSString *btnText = [(UIButton *)sender currentTitle];
     
-    // Do not allow leading '0's
+    // Handle case when '0' is pressed and '0' is already first digit in display
     if ([currentText isEqualToString:@"0"] && [btnText isEqualToString:@"0"])
     {
+        // Avoid leading '0's
         _txtDisplay.text = @"0";
     }
-    // Remove any leading '0's if any numeric button other than '0' is pressed
+    // Handle case when '0' is in display and any other numeric button (1-9) or '.' is pressed
     else if ([currentText isEqualToString:@"0"] && ![btnText isEqualToString:@"0"])
     {
-        // Add decimal point if button is pressed
+        // Add a decimal point to operand if none is already present
         if ([btnText isEqualToString:@"."] && ![self decimalPoint])
         {
             _txtDisplay.text = [currentText stringByAppendingString:@"."];
+            // Set flag to avoid more than one decimal point
             [self setDecimalPoint:YES];
         }
+        // Handle case if any other numeric button (1-9) or '.' is pressed
         else
         {
-            // Avoid more than one decimal point
-            if (![btnText isEqualToString:@"."] || [self decimalPoint])
+            // Only handle case for numeric buttons 1-9
+            if (![btnText isEqualToString:@"."])
             {
+                // Remove leading '0' from operand to be displayed
                 currentText = @"";
                 _txtDisplay.text = [currentText stringByAppendingString:btnText];
             }
         }
     }
-    // Otherwise append the label text to display
+    // Otherwise append the button text to display
     else
     {
-        // Clear field for next operand
+        // Clear textfield for next operand
         if ([self clearScreen])
         {
             currentText = @"";
             [self setClearScreen:NO];
         }
         
-        // Avoid more than one decimal point
-        if (![self decimalPoint] && ![currentText isEqualToString:@""])
+        // Add numeric digit (0-9) to display
+        if (![btnText isEqualToString:@"."])
         {
             _txtDisplay.text = [currentText stringByAppendingString:btnText];
-            
-            // Set flag if decimal point has been added
-            if ([btnText isEqualToString:@"."])
-                [self setDecimalPoint:YES];
         }
+        // Add decimal point if not present and operand already has at least one digit
         else
         {
-            // If current button is not a decimal point then append its text to display
-            if (![btnText isEqualToString:@"."])
+            if (![self decimalPoint] && ![currentText isEqualToString:@""])
+            {
                 _txtDisplay.text = [currentText stringByAppendingString:btnText];
+                // Set flag to avoid more than one decimal point
+                [self setDecimalPoint:YES];
+            }
         }
     }
 }
 
+/**
+ This method handles all binary operations (+,-,✕,÷,x^y)
+ by saving the current display text as the first operand, 
+ and saving the current operator to be evaluated by the 
+ evaluateExpression: method later
+ */
 - (IBAction)selectBinaryOperator:(id)sender
 {
     // Set current text in display to be the first operand
@@ -118,18 +141,26 @@
     // Set the current operator
     [self setOperator:btnText];
     
-    // Set flags
+    // Reset flag for decimal point to prepare for next operand
     [self setDecimalPoint:NO];
+    // Set flag for clearing display for next operand
     [self setClearScreen:YES];
 }
 
+
+/**
+ This method evaluates the expressions with binary
+ operators (invoked by the '=' button), by saving the 
+ current display text as the second operand, evaluating 
+ the expression and finally displaying the result
+ */
 - (IBAction)evaluateExpression:(id)sender
 {
     // Set current text in display to be the second operand
     NSString *currentText = _txtDisplay.text;
     [self setSecondOperand:[currentText floatValue]];
     
-    // Evaluate expression based on operands and operator
+    // Evaluate expression based on operands and operator and display result
     if ([[self operator] isEqualToString:@"+"])
     {
         float sum = [self firstOperand] + [self secondOperand];
@@ -165,11 +196,18 @@
     // Reset second operand to '0'
     [self setSecondOperand:0];
     
-    // Set flags
+    // Set flag to avoid more than one decimal point
     [self setDecimalPoint:YES];
+    // Set flag for clearing display for next operand
     [self setClearScreen:YES];
 }
 
+/**
+ This method handles all unary operations (±,1/x,√,x^2,x^3)
+ by saving the current display text as the first operand
+ and then evaluating the expression based on the specified
+ unary operator, and finally displaying the result
+ */
 - (IBAction)selectUnaryOperator:(id)sender
 {
     // Get operand
@@ -178,7 +216,7 @@
     // Get label text of button
     NSString *btnText = [(UIButton *)sender currentTitle];
     
-    // Evaluate expression based on operand and operator
+    // Evaluate expression based on operand and operator and display result
     if ([btnText isEqualToString:@"±"])
     {
         float result = [currentText floatValue] * (-1.0);
@@ -205,16 +243,24 @@
         _txtDisplay.text = [NSString stringWithFormat:@"%.3f", cube];
     }
     
-    // Set flags
+    // Set flag to avoid more than one decimal point
     [self setDecimalPoint:YES];
+    // Set flag for clearing display for next operand
     [self setClearScreen:YES];
 }
 
+
+/**
+ This method handles the 'C' and 'Del' buttons, by
+ either clearing the display or removing a single 
+ character from the display, respectively
+ */
 - (IBAction)clearOrDeleteDisplayText:(id)sender
 {
     // Get label text of button
     NSString *command = [(UIButton *)sender currentTitle];
     
+    // Handle case if 'C' is pressed
     if ([command isEqualToString:@"C"])
     {
         // Clear display and reset operands and operator
@@ -224,6 +270,7 @@
         [self setOperator:@"+"];
         [self setDecimalPoint:NO];
     }
+    // Otherwise handle case if 'Del' is pressed
     else
     {
         // Delete last digit of current operand
